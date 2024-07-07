@@ -9,9 +9,10 @@ const routes = [
         component: HelloWorld
     },
     {
-        path: '/product',
+        path: '/product/:id',
         name: 'Product',
-        component: Product
+        component: Product,
+        props:true
     },
     {
         path: '/customer',
@@ -24,5 +25,10 @@ const router = createRouter({
     history: createWebHistory(),  // Default base URL
     routes
 });
+const ss = () => {
+    console.log("test");
+};
 
+export {ss};
 export default router;
+

@@ -5,7 +5,7 @@
   <br />
   <input v-bind:value="mesaj">
 
-  <Product :kamil-name="mesaj" />
+  <Product :kamil-name="mesaj" :id="1234" />
 </template>
 
 <script setup>

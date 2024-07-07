@@ -1,6 +1,8 @@
 <template>
   <nav>'
-    <button @click="goto('Product')">product</button>
+    <router-link class="test" to="/product/1234?name=test test">
+      Product
+    </router-link>
     <br/>
     <button @click="goto('Customer')">customer</button>
   </nav>
@@ -12,7 +14,7 @@
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld v-bind:msg="xyz" />
+  <router-view />
 </template>
 
 <script setup>
@@ -28,6 +30,11 @@ const goto = (routePath) => {
 </script>
 
 <style scoped>
+.test{
+  background-color: yellow;
+  color: #1a1a1a;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

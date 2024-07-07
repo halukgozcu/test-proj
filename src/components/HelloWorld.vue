@@ -52,6 +52,13 @@
   <Customer :mesaj="CustomerMesaj" />
   </div>
 
+  <div>
+    <p>TCKN Örneği</p>
+    <input type="text" v-model="tckn" />
+    <p v-if="!tcknValid">TCKN Değeri Valid değil</p>
+    <p v-else>TCKN Değeri Valid</p>
+  </div>
+
   <p>
     Check out
     <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
@@ -87,6 +94,13 @@ const  customerBuilder = {
   age: 33
 }
 
+const tckn = ref('')
+const tcknValid = computed(() =>{
+  return tckn.value.length == 11;
+})
+
+
+
 const fiyat = ref(0)
 const vergi = ref(0)
 const  vergiHesapla = computed(() => {
@@ -110,7 +124,7 @@ const  customer = ref(customerBuilder);
 
 const count = ref(0)
 const showTextBoxItem = ref(true)
-const items = [1,2,3]
+const items = ref([1,2,3])
 
 const incrementDouble = () => {
   count.value +=2;
@@ -121,7 +135,7 @@ const  myAlert = () =>{
 }
 
 const addItemToArray = () => {
-  items.push(999)
+  items.value.push(999)
 }
 
 
