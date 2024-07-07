@@ -5,6 +5,9 @@
     </router-link>
     <br/>
     <button @click="goto('Customer')">customer</button>
+    <router-link class="test" to="/users">
+      Users
+    </router-link>
   </nav>
   <div>
     <a href="https://vitejs.dev" target="_blank">
